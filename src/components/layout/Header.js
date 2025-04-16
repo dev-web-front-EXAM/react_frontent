@@ -44,6 +44,14 @@ const Header = () => {
 
             {currentUser && (
                 <div className="ms-auto d-flex align-items-center">
+                    <button 
+                        className="btn btn-outline-light me-2"
+                        onClick={handleLogout}
+                    >
+                        <FontAwesomeIcon icon={faSignOutAlt} className="me-2" />
+                        <span className="d-none d-sm-inline">Déconnexion</span>
+                    </button>
+                    
                     <div className="dropdown">
                         <button
                             className="btn btn-link text-white dropdown-toggle"
