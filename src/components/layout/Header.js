@@ -33,10 +33,10 @@ const Header = () => {
             </button>
 
             <div className="d-flex align-items-center">
-                <img 
-                    src="/logo.png" 
-                    alt="Maroc Scolarisation" 
-                    style={{ height: '40px', marginRight: '10px' }} 
+                <img
+                    src="/logo.png"
+                    alt="Maroc Scolarisation"
+                    style={{ height: '40px', marginRight: '10px' }}
                     onError={(e) => e.target.src = 'https://via.placeholder.com/40?text=MS'}
                 />
                 <h1 className="me-auto">Maroc Scolarisation</h1>
@@ -44,47 +44,19 @@ const Header = () => {
 
             {currentUser && (
                 <div className="ms-auto d-flex align-items-center">
-                    <button 
+                    <button
                         className="btn btn-outline-light me-2"
                         onClick={handleLogout}
                     >
                         <FontAwesomeIcon icon={faSignOutAlt} className="me-2" />
                         <span className="d-none d-sm-inline">Déconnexion</span>
                     </button>
-                    
-                    <div className="dropdown">
-                        <button
-                            className="btn btn-link text-white dropdown-toggle"
-                            type="button"
-                            id="userDropdown"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            <FontAwesomeIcon icon={faUser} className="me-2" />
-                            <span className="d-none d-sm-inline">
-                                {currentUser.email.split('@')[0]}
-                            </span>
-                        </button>
-                        <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li>
-                                <Link className="dropdown-item" to="/profile">
-                                    Mon profil
-                                </Link>
-                            </li>
-                            <li>
-                                <hr className="dropdown-divider" />
-                            </li>
-                            <li>
-                                <button 
-                                    className="dropdown-item"
-                                    onClick={handleLogout}
-                                >
-                                    <FontAwesomeIcon icon={faSignOutAlt} className="me-2" />
-                                    Déconnexion
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+                    <FontAwesomeIcon icon={faUser} className="me-2" />
+                    <span className="d-none d-sm-inline">
+                        {currentUser.email.split('@')[0]}
+                    </span>
+
+
                 </div>
             )}
         </header>
