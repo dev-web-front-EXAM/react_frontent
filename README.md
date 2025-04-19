@@ -64,14 +64,6 @@ A comprehensive web application built with React for managing student informatio
    ```
    The application will open in your browser at `http://localhost:3000`
 
-### Building for Production
-
-```
-npm run build
-```
-
-This command builds the app for production to the `build` folder, optimizing the build for the best performance.
-
 ## Usage
 
 1. **Registration/Login**: Create a new account or sign in with existing credentials
