@@ -1,4 +1,4 @@
-# Student Expense Management System
+# Student Management System
 
 A comprehensive web application built with React for managing student information and their associated expenses. This project integrates Firebase for authentication and database functionality, providing a secure and efficient way to track student data.
 
@@ -14,12 +14,12 @@ A comprehensive web application built with React for managing student informatio
 
 ## Technology Stack
 
-- **Frontend**: React 19.1.0
-- **Routing**: React Router 7.5.0
-- **UI Framework**: Bootstrap 5.3.5 and React Bootstrap 2.10.9
+- **Frontend**: React js
+- **Routing**: React Router
+- **UI Framework**: Bootstrap 5 and React Bootstrap 2.10
 - **Icons**: Font Awesome
-- **Backend & Database**: Firebase 11.6.0
-- **Date Management**: React-DatePicker 8.3.0
+- **Backend & Database**: Firebase
+- **Date Management**: React-DatePicker
 - **Authentication**: Firebase Authentication
 
 ## Project Structure
