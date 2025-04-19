@@ -57,7 +57,7 @@ const initialStudents = [
             { id: 4, name: 'Certificat de scolarité', path: '/documents/cert3.pdf' }
         ],
         sponsor: 'Nadia Idrissi',
-        isActive: true,
+        isActive: false,
         createdAt: '2022-09-05'
     }
 ];

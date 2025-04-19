@@ -188,12 +188,12 @@ const StudentForm = () => {
         },
         specialNeeds: formData.specialNeeds,
         sponsor: formData.sponsor || null,
-        // In a real app, we would upload files to a server and store URLs
+
         documents: formData.documents.concat(
           uploadedFiles.map(file => ({
             id: file.id,
             name: file.name,
-            path: file.preview // In real app, this would be the server path
+            path: file.preview
           }))
         )
       };
