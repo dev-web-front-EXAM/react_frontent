@@ -4,7 +4,8 @@ import {
   logInWithEmailAndPassword, 
   registerWithEmailAndPassword,
   logOut,
-  onAuthStateChangedListener
+  onAuthStateChangedListener,
+  signInWithGoogle
 } from '../firebase/firebase';
 
 // Create the context
@@ -30,6 +31,18 @@ export const AuthProvider = ({ children }) => {
     setError('');
     try {
       await logInWithEmailAndPassword(email, password);
+      return true;
+    } catch (err) {
+      setError(err.message);
+      return false;
+    }
+  };
+
+  // Google sign in function
+  const loginWithGoogle = async () => {
+    setError('');
+    try {
+      await signInWithGoogle();
       return true;
     } catch (err) {
       setError(err.message);
@@ -70,6 +83,7 @@ export const AuthProvider = ({ children }) => {
   const value = {
     currentUser,
     login,
+    loginWithGoogle,
     register,
     logout,
     error,

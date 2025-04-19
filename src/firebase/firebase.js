@@ -4,11 +4,11 @@ import {
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
     signOut,
-    onAuthStateChanged
+    onAuthStateChanged,
+    GoogleAuthProvider,
+    signInWithPopup
 } from 'firebase/auth';
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyCkeQ24uVuiJ6BwLaCHKoVbBO5HLy-AL5Y",
     authDomain: "gggg-7e510.firebaseapp.com",
@@ -22,6 +22,22 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+// Create Google provider instance
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+    prompt: 'select_account'
+});
+
+// Sign in with Google
+export const signInWithGoogle = async () => {
+    try {
+        return await signInWithPopup(auth, googleProvider);
+    } catch (err) {
+        console.error(err);
+        throw err;
+    }
+};
 
 // Sign in with email and password
 export const logInWithEmailAndPassword = async (email, password) => {
