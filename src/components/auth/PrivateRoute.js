@@ -16,7 +16,6 @@ const PrivateRoute = () => {
     );
   }
 
-  // If not authenticated, redirect to login page, otherwise render the protected route
   return currentUser ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
